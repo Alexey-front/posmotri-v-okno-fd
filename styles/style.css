@@ -65,8 +65,9 @@ ol {
 
 /* НАЧАЛО СТИЛЕЙ КОЛОНКИ С ВЫБОРОМ ГОРОДА */
 .content__details {
-  height: 534px;
+  height: 100%;
   width: 399px;
+  padding-top: 10px;
 }
 
 /* ЗАГОЛОВОК КОЛОНКИ С ВЫБОРОМ ГОРОДА */
@@ -92,7 +93,7 @@ ol {
   flex-direction: column;
   gap: 30px;
   width: 399px;
-  height: 289px;
+  height: 299px;
   overflow: auto;
 }
 
@@ -108,9 +109,13 @@ ol {
   width: 390px;
 }
 
+/* Из-за отступа не встаёт картинка, но если убрать, то при фокусе у самой первой не видно верхней границы outline.
+Я думаю, что такой момент можно обсудить с дизайнером, в душе не чаю как примерно можно решить эту проблэмс.
+
 .content__list-item:first-child {
   padding-top: 3px;
 }
+*/
 
 .content__list-item:focus {
   outline: none;
@@ -143,11 +148,12 @@ ol {
   text-transform: uppercase;
   text-overflow: ellipsis;
   white-space: nowrap;
-  line-height: 1;
+  line-height: 1.1;
 }
 
 /* ПАРАГРАФ КАРТОЧЕК */
 .content__video-card-description {
+  padding-top: 3px;
   display: -webkit-box;
   overflow: hidden;
   font-family: "Fira Sans Condensed", sans-serif;
@@ -268,13 +274,17 @@ ol {
   width: 19px;
   height: 19px;
   border: 1px solid white;
+  display: flex;
+  align-items: center;
+  justify-self: center;
 }
 
 .search-form__pseudo-checkbox::after {
   content: "";
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 90%;
+  height: 90%;
+  margin: auto;
   opacity: 0;
   background-color: white;
 }
@@ -332,9 +342,10 @@ ol {
 }
 
 .more-button {
-  width: 100%;
-  padding-left: 4px;
-  padding-right: 4px;
+  width: 99%;
+  justify-self: center;
+  margin-bottom: 2px;
+  margin-right: 1px;
 }
 
 /* Кастомный скроллбар */
